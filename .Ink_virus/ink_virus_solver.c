@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 // program not change nameless directory name
-// virus
+// v0.1
 int main(int argc, char *argv[])
 {
 	char c, command[30], del_command[11];
