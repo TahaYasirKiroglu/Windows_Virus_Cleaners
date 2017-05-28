@@ -8,6 +8,8 @@ def ink_virus_cleaner
 	Dir.chdir(driver)
 	rescue
 		puts "Uyari: Driver bulunamadi!!!"
+		puts "Cikmak icin bir tusa basiniz..."
+		STDIN.getc
 		return false
 	end		
 	
