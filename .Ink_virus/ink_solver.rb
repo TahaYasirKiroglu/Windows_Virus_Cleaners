@@ -5,7 +5,7 @@ def ink_virus_cleaner
 	driver = STDIN.getc
 	driver += ":"
 	begin
-		state = (Dir.chdir(driver) == 0)? true:false
+	Dir.chdir(driver)
 	rescue
 		puts "Uyari: Driver bulunamadi!!!"
 		return false
