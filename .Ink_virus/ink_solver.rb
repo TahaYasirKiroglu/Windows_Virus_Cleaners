@@ -21,7 +21,7 @@ def ink_virus_cleaner
 	dir_index = 0
 	dirs.each do |dir|
 		if dir.size < 2
-			FileUtils.mv dir, 'kurtarilan_dosya#{dir_index}'
+			FileUtils.mv dir, "kurtarilan_dosya#{dir_index}"
 			dir_index += 1
 		end
 	end
