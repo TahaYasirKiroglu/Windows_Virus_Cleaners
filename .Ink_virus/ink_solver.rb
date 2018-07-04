@@ -1,4 +1,4 @@
-VERSION = '1.1.0'
+VERSION = '1.1.1'
 class InkCleaner
   require 'fileutils'
   SYSTEM_FILES = ['Thumbs.db', 'System Volume Information']  
@@ -12,14 +12,14 @@ class InkCleaner
   end
   
   def self.choose_driver
-    puts 'Kullanılabilir Diskler: '
+    puts 'Kullanilabilir Diskler: '
     system 'wmic logicaldisk get caption, volumename, description'
     print 'Surucu harfini giriniz: '
     @driver = STDIN.getc.upcase + ':'
   end
   
   def self.clear_ink
-    puts "ink dosyaları temizleniyor..."
+    puts "ink dosyalari temizleniyor..."
     Dir.glob('*').each do |w|
       if w.downcase.end_with? 'ink'
         File.delete w
@@ -34,7 +34,7 @@ class InkCleaner
   end
   
   def self.remove_permissions
-    puts "Dosya izinleri ayarlanıyor..."
+    puts "Dosya izinleri ayarlaniyor..."
     @dirs.each { |d| system 'attrib +h -r -s /s /d ' + d }
   end
   
